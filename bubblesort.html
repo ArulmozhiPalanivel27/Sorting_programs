@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <title>Looping stream</title>
+         <script>
+            function swap(arr, first_Index, second_Index) {
+                var temp = arr[first_Index];
+                arr[first_Index] = arr[second_Index];
+                arr[second_Index] = temp;
+
+
+                
+            }
+            function bubble_sort(arr) {
+                 var len = arr.length, i, j, stop;
+
+                 for (i=0; i<len; i++) { 
+                     for(j=0, stop=len-i; j<stop; j++) {
+                         if (arr[j] > arr[j+1]) {
+                             swap(arr, j, j+1);
+                         }
+                     }
+
+                 }
+               
+                return arr;
+            }
+             document.write(bubble_sort([6,2,8,5,-6,-2,0,1,6,3]));
+             bubble_sort(arr);
+        </script> 
+    
+
+
+    </head>
+    <body>
+
+    </body>
+</html>
