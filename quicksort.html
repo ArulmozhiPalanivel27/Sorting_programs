@@ -2,34 +2,31 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <title>Looping stream</title>
+    <title>Quick sorting</title>
+
     <script>
-  function quickSort(items, left, right) {
-    var index;
-    if (items.length > 1) {
-        index = partition(items, left, right); //index returned from partition
-        if (left < index - 1) { //more elements on the left side of the pivot
-            quickSort(items, left, index - 1);
-        }
-        if (index < right) { //more elements on the right side of the pivot
-            quickSort(items, index, right);
-        }
-    }
-    return items;
-}
-// first call to quick sort
-var result = quickSort(items, 0, items.length - 1);
+        function quick_sort(array) {
+         
 
-document.write(quickSort(result));
+                for (var i = 0; i < length; i++) {
+                    if (array[i] <= pivot) {
+                        left.push(array[i]);
+                    } else {
+                        right.push(array[i]);
+                    }
+                }
+                return newArray.concat(quick_sort(left), pivot, quick_sort(right));
+
+            }
+        }
+
+        var listArray = [22, 7, -5, 76, -20, 3, 25, 12, 9, 87];
+       
     </script>
-
-
-
-</head>
 
 <body>
 
 </body>
+</head>
 
 </html>
